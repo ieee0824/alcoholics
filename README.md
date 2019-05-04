@@ -1,7 +1,7 @@
 # alcoholics
 
 alcoholics is golang gin Web Framework Middleware.  
-This is randomly generate an error.
+This is a resiliency tool that helps applications tolerate random instance failures.
 
 ```Go
 package main
