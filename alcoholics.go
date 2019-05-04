@@ -1,7 +1,6 @@
 package alcoholics
 
 import (
-	"fmt"
 	"math/rand"
 	"time"
 
@@ -46,7 +45,6 @@ type Drunker struct {
 func (d *Drunker) Drunk() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		idx := rand.Int() % len(d.o)
-		fmt.Println(len(d.o), idx)
 		o := d.o[idx]
 		if o.isError {
 			ctx.JSON(o.StatusCode, o.ErrorMessage)
