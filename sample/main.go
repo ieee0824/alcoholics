@@ -11,16 +11,16 @@ func main() {
 	r := gin.Default()
 	r.Use(alcoholics.New([]alcoholics.Option{
 		{
-			Probability: 10,
+			Probability: 5,
 			StatusCode:  200,
 		},
 		{
-			Probability:  10,
+			Probability:  1,
 			StatusCode:   http.StatusNotFound,
 			ErrorMessage: "なんか無いよ",
 		},
 		{
-			Probability:  10,
+			Probability:  1,
 			StatusCode:   http.StatusInternalServerError,
 			ErrorMessage: "なんかおかしい",
 		},

@@ -19,14 +19,6 @@ type Option struct {
 	isError      bool
 }
 
-func shuffle(data []Option) {
-	n := len(data)
-	for i := n - 1; i >= 0; i-- {
-		j := rand.Intn(i + 1)
-		data[i], data[j] = data[j], data[i]
-	}
-}
-
 func New(os []Option) *Drunker {
 	ret := &Drunker{
 		o: []Option{},
@@ -43,8 +35,6 @@ func New(os []Option) *Drunker {
 			ret.o = append(ret.o, o)
 		}
 	}
-
-	shuffle(ret.o)
 
 	return ret
 }
